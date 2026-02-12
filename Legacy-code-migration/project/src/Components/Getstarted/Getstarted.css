@@ -1,0 +1,65 @@
+.getstarted {
+  padding-right: 100px;
+  padding-left: 100px;
+  /* Optional: Adds padding around the container */
+  padding-bottom: 150px
+}
+
+.get-right {
+  margin: 5px; /* Optional: Adds margin for the right container */
+}
+
+.get-right p {
+  margin-bottom: 15px; /* Space between paragraphs */
+  line-height: 1.6; /* Increases line height for better readability */
+}
+
+.get-right h2 {
+  margin-top: 20px; /* Space above the heading */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.getstarted {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center text horizontally */
+  justify-content: flex-start; /* Align text to the top */
+  height: 100vh;
+}
+
+.get-right {
+  text-align: left; /* Change text alignment if needed */
+  margin-bottom: 0px; /* Reduce bottom margin if needed */
+  flex: 1; /* Allow this section to grow */
+}
+.hello {
+  display: flex;
+  justify-content: center; /* Center the button */
+  width: 100%;
+  margin-top: 0px; /* Gap of 2px between text and button */
+}
+
+
+.btnn {
+  background: #212ea0;       /* Blue background */
+  color: white;              /* White text color */
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnn img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.btnn.dark-btn {
+  background: #212ea0;       /* Dark button style if needed */
+  color: white;
+}
