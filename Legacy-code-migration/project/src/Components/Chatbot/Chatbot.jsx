@@ -1,14 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Groq from "groq-sdk"; // Import Groq SDK
+import Groq from "groq-sdk";
 import one from "../../assets/logos/one.png";
 import './Chatbot.css';
 
-// Initialize Groq client with API key
-//const groq = new Groq({ apiKey: "add api key", dangerouslyAllowBrowser: true  });
+//  Load API key safely from environment
+const groq = new Groq({
+  apiKey: import.meta.env.VITE_GROQ_API_KEY,
+  dangerouslyAllowBrowser: true
+});
 
 const systemMessage = {
   role: 'system',
-  content: 'Your task is to give  explanation of code provided by the user.'
+  content: 'Your task is to give explanation of code provided by the user.'
 };
 
 const Chatbot = () => {
@@ -19,11 +22,9 @@ const Chatbot = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [input, setInput] = useState('');
 
-  const messagesEndRef = useRef(null); // Ref for scrolling
+  const messagesEndRef = useRef(null);
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+  const handleToggle = () => setIsOpen(!isOpen);
 
   const handleSend = async () => {
     if (input.trim() === '') return;
@@ -61,11 +62,8 @@ const Chatbot = () => {
     }
   }
 
-  // Scroll to the bottom when messages change
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   return (
@@ -91,7 +89,7 @@ const Chatbot = () => {
                 </div>
               ))}
               {isTyping && <div className="typing">Typing....</div>}
-              <div ref={messagesEndRef} /> {/* Scroll anchor */}
+              <div ref={messagesEndRef} />
             </div>
             <div className="chat-input">
               <input
@@ -111,4 +109,3 @@ const Chatbot = () => {
 };
 
 export default Chatbot;
-
