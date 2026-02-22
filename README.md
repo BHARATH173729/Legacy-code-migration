@@ -1,6 +1,6 @@
 # Legacy Code Migration
 
-Developed an AI-driven solution to automate the migration of legacy code from **Delphi, COBOL, and VB** to modern technologies such as **C and Java**, significantly reducing manual effort and errors. It utilizes **machine learning models** like **Deep Q-learning** and **Natural Language Understanding (NLU)** to analyze and translate legacy code snippets. The application also features a **chatbot powered by GPT-3 API** to assist users with code documentation and queries.
+Developed an AI-driven solution to automate the migration of legacy code from **Delphi, COBOL, and VB** to modern technologies such as **C and Java**, significantly reducing manual effort and errors. It utilizes **machine learning models** like **Deep Q-learning** and **Natural Language Understanding (NLU)** to analyze and translate legacy code snippets. The application also features a **chatbot powered by GPT-3 API** to assist users with code documentation and     queries.
 
 ## 🚀 Features
 
@@ -69,3 +69,4 @@ Feel free to **fork** this repository, raise **pull requests**, or report **issu
 For any queries, contact [Sumith](https://github.com/Sumith-2003).
 
 ---
+
